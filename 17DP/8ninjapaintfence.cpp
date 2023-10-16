@@ -26,23 +26,23 @@ int mul(int a ,int b){
     
 // }
 
-// int solveMem(int n, int k,vector<int> &dp){
-//     if(n==1){
-//         return k;
-//     }
-//     if(n==2){
-//         return k*k;
-//     }
-//     if(dp[n]!=-1){
-//         return dp[n];
-//     }
+int solveMem(int n, int k,vector<int> &dp){
+    if(n==1){
+        return k;
+    }
+    if(n==2){
+        return k*k;
+    }
+    if(dp[n]!=-1){
+        return dp[n];
+    }
     
-//     dp[n]= add(mul(solveMem(n-2,k,dp),k-1),mul(solveMem(n-1,k,dp),k-1));
+    dp[n]= add(mul(solveMem(n-2,k,dp),k-1),mul(solveMem(n-1,k,dp),k-1));
 
-//     return dp[n];
+    return dp[n];
 
     
-// }
+}
 
 
 int solveTab(int n, int k){
@@ -61,12 +61,12 @@ int solveTab(int n, int k){
 
 
 int numberOfWays(int n, int k) {
-    // Write your code here.
-    // int ans=solveRec(n,k);
-    // return ans;
+    Write your code here.
+    int ans=solveRec(n,k);
+    return ans;
 
-    // vector<int> dp(n+1,-1);
-    // return solveMem(n,k,dp);
+    vector<int> dp(n+1,-1);
+    return solveMem(n,k,dp);
 
     int ans=solveTab( n, k);
     return ans;
