@@ -3,8 +3,8 @@ using namespace std;
 
 void update(int **p){
     // p=p+1;
-    *p=*p+1;
-    // **p=**p+1;
+    // *p=*p+1;
+    **p=**p+1;
 }
 
 int main()
@@ -25,7 +25,7 @@ int main()
      update(p2);
     cout << a << endl;
     cout << *p1 << endl;
-    cout << *p2 << endl;
+    cout << **p2 << endl;
 
 
 
