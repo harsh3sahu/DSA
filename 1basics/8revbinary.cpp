@@ -12,16 +12,19 @@ int main(){
         mask=(mask<<1)|1;
         x=x>>1;
     }
+
+
+    
     int t=~n;
-    for(int i=0;i<32;i++){
-        if(t&1){
-            cout<<1<<" ";
-        }
-        else{
-            cout<<0<<" ";
-        }
-        t=t>>1;
-    }
+    // for(int i=0;i<32;i++){
+    //     if(t&1){
+    //         cout<<1<<" ";
+    //     }
+    //     else{
+    //         cout<<0<<" ";
+    //     }
+    //     t=t>>1;
+    // }
 
     int ans=(~n)&mask;
 

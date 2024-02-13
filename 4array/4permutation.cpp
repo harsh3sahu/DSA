@@ -56,7 +56,7 @@ bool check(string s1,string s2){
 int main(){
 
     string s1 = "harsh";
-    string s2= "hsar";
+    string s2= "hsarh";
 
     bool ans=check(s1,s2);
 

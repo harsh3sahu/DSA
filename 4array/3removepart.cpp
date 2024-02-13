@@ -4,8 +4,8 @@
 using namespace std;
 
 string rem(string s,string part){
-    size pos = s.find(part);
-    while (pos != string::npos) {
+    size_t pos = s.find(part);
+    if (pos != string::npos) {
         s.erase(pos, part.length());
         pos = s.find(part);
     }

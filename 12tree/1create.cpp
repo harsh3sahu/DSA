@@ -85,7 +85,7 @@ void inordertraversal(Node *root){
     }
 
     inordertraversal(root->left);
-    
+
     cout<<root->data<<" ";
 
     inordertraversal(root->right);
@@ -134,7 +134,7 @@ void treefromlevel(Node* &root){
     while(!q.empty()){
         Node* temp=q.front();
         q.pop();
-        
+
 
         cout<<"enter data for left of "<<temp->data<<endl;
         int left;
@@ -164,14 +164,13 @@ void treefromlevel(Node* &root){
 int main()
 {
 
-    Node *root = NULL;
+    // Node *root = NULL;
 
     // root =buildtree(root);
 
     // levelordertraversal(root);
 
     // inordertraversal(root);
-
 
     // preordertraversal(root);
 

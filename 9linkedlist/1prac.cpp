@@ -1,107 +1,54 @@
 #include<iostream>
-
 using namespace std;
 
-
-class node{
+class Node{
 
     public:
     int data;
-    node* next;
+    Node *next;
 
-    node(int data){
+    Node(int data){
         this->data=data;
         this->next=NULL;
     }
 
 
+
 };
 
+void insertAtTail(Node* n1,int data){
 
-void inserthead(node* &head,int data){
+    Node *n2=n1;
 
-    node* temp=new node(data);
-    temp->next=head;
-    head=temp;
-    
+    while(n2->next!=NULL){
+        n2=n2->next;
+    }
+    Node *temp=new Node(data);
+    n2->next=temp;
+
 }
 
-void printLinkedList(node* &head){
-    node* temp=head;
-    while(temp!=NULL){
-        cout<<temp->data<<endl;
-        temp=temp->next;
+void printLinkedList(Node* n1){
+    while(n1->next!=NULL){
+        cout<<n1->data<<endl;
+        n1=n1->next;
     }
-}
-
-void reverseLinkedList(node* &curr, node* &forward, node* &prev, node* &head){
-
-    if(curr==NULL){
-        return ;
-    }
-
-    forward=curr->next;
-    curr->next=prev;
-    prev=curr;
-    curr=forward;
-
-    reverseLinkedList(curr,forward,prev,head);
-
-    head=prev;
-    
-}
-
-void midLinkedList(node* &head, node* &mid){
-    node* fast=head;
-    node* slow=head;
-    while(fast->next!=NULL && fast!=NULL){
-        fast=fast->next->next;
-        slow=slow->next;
-    }
-    mid =slow;
-}
-
-bool checkcircular(node* head){
-    node* temp=head;
-
-    while(temp->next!=NULL && temp->next!=head){
-        temp=temp->next;
-        cout<<"check point 1\n";
-    }
-
-    if(temp->next==NULL){
-        return false;
-    }
-    else{
-        return true;
-    }
-
-
 }
 
 int main(){
 
-    node* head=new node(10);
-    inserthead(head,15);
-    inserthead(head,20);
+    Node *n1= new Node(10);
 
-    printLinkedList(head);
-    // node* prev=NULL;
+    insertAtTail(n1,11);
+    insertAtTail(n1,12);
+    insertAtTail(n1,13);
+    insertAtTail(n1,14);
+    insertAtTail(n1,15);
 
-    // reverseLinkedList(head,head,prev,head);
 
-    // printLinkedList(head);
 
-    // node* mid;
-    // midLinkedList(head,mid);
+    printLinkedList(n1);
 
-    // cout<<mid->data;
-
-    cout<<"checking circular\n";
-
-    bool cir=checkcircular(head);
-
-    cout<<"is linkedlist circular"<< cir<<endl;
 
 
 

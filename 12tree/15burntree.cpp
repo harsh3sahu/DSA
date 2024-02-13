@@ -46,8 +46,9 @@
             int size=q.size();
             for(int i=0;i<size;i++){
                 Node *front=q.front();
-                
                 q.pop();
+                
+                
                 if(front->left && !visited[front->left]){
                     q.push(front->left);
                     visited[front->left]=1;
@@ -67,6 +68,7 @@
                     visited[nodeParent[front]]=1;
                     flag=1;
                 }
+                
             }
             
             if(flag==1){

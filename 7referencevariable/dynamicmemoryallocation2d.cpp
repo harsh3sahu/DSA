@@ -4,9 +4,9 @@ using namespace std;
 int main()
 {
 
-    int row;
+    int a;
     cout << "enter number of rows\n";
-    cin >> row;
+    cin >> a;
 
     int **arr = new int *[a];
 

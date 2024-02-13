@@ -138,12 +138,12 @@ int main(){
     takeInput(root);
      
     levelOrder(root);
-    int data;
-    cout<<endl<<"enter node to delete\n";
-    cin>>data;
+    // int data;
+    // cout<<endl<<"enter node to delete\n";
+    // cin>>data;
 
-    deleteNode(root,data);
-    levelOrder(root);
+    // deleteNode(root,data);
+    // levelOrder(root);
 
 
 

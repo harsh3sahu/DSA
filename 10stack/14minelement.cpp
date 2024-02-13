@@ -63,24 +63,24 @@ int main(){
     minStack ms(5);
 
     ms.push(5);
-    cout<<ms.mini<<endl;
+    // cout<<ms.mini<<endl;
 
     ms.push(3);
-    cout<<ms.mini<<endl;
+    // cout<<ms.mini<<endl;
 
     ms.push(8);
-    cout<<ms.mini<<endl;
+    // cout<<ms.mini<<endl;
 
     ms.push(2);
-    cout<<ms.mini<<endl;
+    // cout<<ms.mini<<endl;
 
     ms.push(4);
-    cout<<ms.mini<<endl;
+    // cout<<ms.mini<<endl;
 
-    ms.pop();
+    // ms.pop();
     // ms.pop();
 
-    cout<<ms.st.top();
+    // cout<<ms.st.top();
 
     return 0;
 }

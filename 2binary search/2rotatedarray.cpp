@@ -19,7 +19,7 @@ int binarySearch(int arr[], int size, int pivot, int n)
             mid = (start + end) / 2;
             if (n > arr[mid])
             {
-                start = mid ;
+                start = mid+1 ;
             }
 
             if (n < arr[mid])
@@ -29,13 +29,30 @@ int binarySearch(int arr[], int size, int pivot, int n)
 
             else
             {
-                ans = mid;
+                return mid;
             }
 
             
         }
     }
-    return ans;
+    else{
+        start=pivot+1;
+        mid= (start+end)/2;
+
+        while(start<end){
+            if(n==arr[mid]){
+                return mid;
+            }
+
+            if(n>arr[mid]){
+                start=mid+1;
+            }
+            if(n<arr[mid]){
+                end=mid;
+            }
+        }
+    }
+    return -1;
 }
 
 int findPivot(int arr[], int size)

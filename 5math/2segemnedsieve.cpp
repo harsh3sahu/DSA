@@ -44,7 +44,7 @@ void segmentedSieve(int n)
 	while (low < n)
 	{
 		if (high >= n)
-		high = n;
+			high = n;
 		
 		
 		bool mark[limit+1];

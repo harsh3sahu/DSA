@@ -60,7 +60,7 @@ void getMed(int element, priority_queue<int> &maxHeap,
   }
   return ;
 }
-  vector<int> findMedian(vector<int> & arr, int n) {
+vector<int> findMedian(vector<int> & arr, int n) {
 
     // Write your code here
     priority_queue<int> maxHeap;
@@ -73,4 +73,4 @@ void getMed(int element, priority_queue<int> &maxHeap,
       ans.push_back(median);
     }
     return ans;
-  }
+}

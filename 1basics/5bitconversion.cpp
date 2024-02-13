@@ -10,14 +10,14 @@ int main()
     cin >> n;
 
     int ans = 0;
-    int i = 0;
+    
     while (n != 0)
     {
 
         int bit = n & 1;
 
         ans = (ans *10) + bit;
-        i++;
+        
         n=n >> 1;
     }
 

@@ -16,12 +16,12 @@ int partition(int arr[], int start, int end)
     swap(arr[pivotindex], arr[start]);
     int i = start;
     int j = end;
-    cout << "okay check 2" << endl;
+    // cout << "okay check 2" << endl;
 
     while (i < pivotindex && j > pivotindex)
     {
 
-        cout << "okay check 3" << endl;
+        // cout << "okay check 3" << endl;
 
         while (arr[i] <= pivot)
         {
@@ -38,20 +38,20 @@ int partition(int arr[], int start, int end)
             
         }
     }
-    cout << "okay check 4" << endl;
+    // cout << "okay check 4" << endl;
 
     return pivotindex;
 }
 
 void qSort(int arr[], int start, int end)
 {
-    int pivot = arr[start];
+    // int pivot = arr[start];
 
     if (start >= end)
     {
         return;
     }
-    cout << "okay check 1" << endl;
+    // cout << "okay check 1" << endl;
     int pos = partition(arr, start, end);
 
     qSort(arr, start, pos - 1);
